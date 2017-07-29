@@ -7,6 +7,9 @@
 .fl-r{
     float: right;
 }
+.clearfix{
+    @include clearfix;
+}
 .title{
     color: #010101;
     // @include fz(34px);
