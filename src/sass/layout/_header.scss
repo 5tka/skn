@@ -1,0 +1,17 @@
+.header {
+	position: relative;
+	z-index: 2;
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+.header__menu {
+	display: flex;
+	justify-content: space-between;
+	flex: 1;
+}
+.menu__tel {
+	text-align: right;
+}
