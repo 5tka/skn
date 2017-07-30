@@ -17,7 +17,8 @@ var gulp = require('gulp'),
     rigger = require('gulp-rigger'), // іморт файлів в файл like //="../../../bower_components/...
     gcmq = require('gulp-group-css-media-queries'), // обєднує media з однаковими breakpoint
     zip = require('gulp-zip'); // обєднує media з однаковими breakpoint
-    criticalCss = require('gulp-penthouse');
+    criticalCss = require('gulp-penthouse'),
+    spritesmith = require('gulp.spritesmith');  
 
 var path = {
     name: "boiler",
@@ -36,22 +37,41 @@ var path = {
         js: 'src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
         jsVendor: 'src/js/vendor/*.js',//В стилях и скриптах нам понадобятся только main файлы
         scss: ['src/sass/**/*.scss','src/sass/**/*.sass'],
-        img: ['src/img/**/*.*','!src/img/**/*.tmp'],//  Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+        img: ['src/img/**/*.*','!src/img/**/*.tmp',,'!src/img/sprite_source/**/*.*'],//  Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
         fonts: 'src/fonts/*',
-        favicon: 'src/favicon/*'
+        favicon: 'src/favicon/*',
+        cssSprite: './src/sass/sprites/',
+        imgSprite: './src/img/sprite_source/**/*.png'
     },
     watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+        imgSprite: 'src/img/sprite_source/**/*.png',
         pug: './src/pug/**/*.pug',
         pugIncludes: './src/pug/_includes/**/*.pug',
         js: './src/js/*.js',
         jsCoffee: './src/js/*.coffee',
         jsVendor: './src/js/vendor/*.js',
         scss: ['./src/sass/**/*.scss','./src/sass/_*.scss', './src/sass/**/*.sass','./src/sass/_*.sass'],
-        img: './src/img/**/*',
+        img: ['./src/img/**/*','!./src/img/sprite_source/**/*'],
         favicon: './src/favicon/*',
         fonts: './src/fonts/*'
     }
 };
+
+// Sprite
+gulp.task('sprite', function () {
+  // Generate our spritesheet
+  var spriteData = gulp.src(path.src.imgSprite).pipe(spritesmith({
+    imgName: 'sprite.png',
+    imgPath: '../img/sprite.png',
+    cssName: '_sprite.scss',
+    cssFormat: 'scss',
+    padding: 5
+  }));
+
+  spriteData.img.pipe(gulp.dest('./src/img/')); // output path for the sprite
+  spriteData.css.pipe(gulp.dest(path.src.cssSprite)); // output path for the CSS
+});
+
 //Собираем Pug ( html )
 gulp.task('pug-includes', function() {
   return gulp.src(path.src.pug)
@@ -131,6 +151,7 @@ gulp.task('critical-css', function () {
 //Сжатие изображений
 gulp.task('img', function() {
   return gulp.src(path.src.img)
+    .pipe(changed(path.build.img))
     .pipe(imagemin({ optimizationLevel: 3, progressive: true}))
     .pipe(gulp.dest(path.build.img));
 });
@@ -177,17 +198,21 @@ gulp.task('zip', () => {
         .pipe(gulp.dest(path.build.server));
 });
 // WATCH
-gulp.task('default', ['pug-includes','sass-dev','img','js-vendor','js','favicon','fonts'], function () {
+gulp.task('default', ['pug-includes','sprite','sass-dev','img','js-vendor','js','favicon','fonts'], function () {
 
     browserSync.init({
       server : path.build.server
     });
-    watch(path.watch.pugIncludes, function() {
-      gulp.start('pug-includes');
+    watch(path.watch.imgSprite, function() {
+      gulp.start('sprite');
     });
 
     watch(path.watch.pug, function() {
       gulp.start('pug-templates');
+    });
+
+    watch(path.watch.scss, function() {
+      gulp.start('sass-dev');
     });
 
     watch(path.watch.scss, function() {
