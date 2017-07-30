@@ -12,6 +12,11 @@ $(document).ready(function() { // начало document.ready
 		items: 5,
 		nav: true
 	});
+	$('.reviews__slider').owlCarousel({
+		items: 3,
+		nav: true
+	});
+	
 	
 
 
