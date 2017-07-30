@@ -1,0 +1,25 @@
+.clients {
+	background-color: #f9f9f9;
+	.container  {
+		padding-top: 60px;
+		padding-bottom: 55px;
+	}
+	.setion-title {
+		margin-bottom: 33px;
+	}
+}
+.clients-slide {
+	padding-left: 10px;
+	padding-right: 10px;
+	display: block;
+}
+
+.clients-image__wrap {
+	text-align: center;
+	line-height: 85px;
+	img {
+		vertical-align: middle;
+		display: inline-block;
+		max-width: 100%;
+	}
+}

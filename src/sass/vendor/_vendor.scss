@@ -11,7 +11,7 @@
   width: 100%;
   -webkit-tap-highlight-color: transparent;
   /* position relative and z-index fix webkit rendering fonts issue */
-  position: relative;
+  // position: relative;
   z-index: 1; }
   .owl-carousel .owl-stage {
     position: relative;
@@ -46,8 +46,9 @@
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none; }
   .owl-carousel .owl-item img {
-    display: block;
-    width: 100%; }
+    // display: block;
+    // width: 100%; 
+  }
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
     display: none; }
