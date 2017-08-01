@@ -18,14 +18,14 @@
 	}
 	.owl-prev {
 		float: left;
-		@include sprite($slider-arr-black-l)
+		@include sprite($slider-arr-white-l)
 		&:hover {
 			@include sprite($slider-arr-yellow-l)
 		}
 	}
 	.owl-next {
 		float: right;
-		@include sprite($slider-arr-black-r)
+		@include sprite($slider-arr-white-r)
 		&:hover {
 			@include sprite($slider-arr-yellow-r)
 		}

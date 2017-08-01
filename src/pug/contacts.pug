@@ -1,0 +1,62 @@
+extends _layout.pug
+
+block main 
+	section.contacts-details
+		.container 
+			.contacts-details__block
+				ul.contacts-details__list
+					li.contacts-details__item
+						.img-wrap.tel
+							img(src='img/icons/phone.svg')
+						p.text ТЕЛЕФОН <br>
+							| +7 812 921‑44-49 <br>
+							| (с 09:00 до 22:00)  <br>
+							| факс: <br>
+							| +7 812 234‑98-31
+					li.contacts-details__item
+						.img-wrap.adress
+							img(src='img/icons/geolocation.svg')
+						p.text АДРЕС <br>
+							| Санкт-Петербург, <br>
+							| м. Петроградская,  <br>
+							| Аптекарский просп., 6
+					li.contacts-details__item
+						.img-wrap.time
+							img(src='img/icons/time.svg')
+						p.text РЕЖИМ РАБОТЫ ОФИСА <br>
+							| Пн-Пт, с 10.00 до 18.00  <br>
+					li.contacts-details__item
+						.img-wrap.email
+							img(src='img/icons/mail.svg')
+						p.text EMAIL <br>
+							| magistral-skn.ru
+			.skn__wrap 
+				h2.skn-form__title Узнай о ремонте СКН
+				form.skn-form
+					p.skn-form__text Оставьте вашу заявку здесь и мы ответим на все ваши вопросы!
+					.fields
+						.inputs__wrap
+							label
+								span.text Телефон
+								input.field(type='text' placeholder='Ваш телефон')
+							label
+								span.text Имя
+								input.field(type='text' placeholder='Ваше имя')
+						label
+							span.text Напишите свой вопрос здесь
+							textarea.field(type='text' placeholder='Ваше сообщение')
+					button(type='submit').submit ОСТАВИТЬ ЗАЯВКУ
+	section.find-us
+		.find-us__wrapper
+			.find-us__map#find-us__map
+			.container 
+				.find-us__block 
+					p.block-title Офис
+					.block-inner
+						p.line.metro м. Крестовский остров
+						p.line.metro м. Старая Деревня
+						p.line.metro м. Черная речка
+						p.line.adress Липовая аллея, 9, лит. А
+						a.line.tel(href='tel:78129214449') +7 812 921‑44-49
+						p.line.work-time С 9:00 до 20:00 без выходных
+					a.directions(href='#') схема проезда к офису

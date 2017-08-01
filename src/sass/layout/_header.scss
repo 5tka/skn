@@ -1,11 +1,26 @@
 .header {
 	position: relative;
 	z-index: 2;
+	background-color: #fff;
 	.container {
 		padding-top: 25px;
+		padding-bottom: 10px;
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
+	}
+	&.main-page__header {
+		background: none;
+		.menu__tel-link,
+		.menu__call-request,
+		.menu__link {
+			color: #ffffff;
+		}
+		.menu__link {
+			&:hover {
+				border: 2px solid #ffffff;
+			}
+		 }
 	}
 }
 .header__menu {
@@ -16,7 +31,6 @@
 	flex: 1;
 }
 .menu__link {
-	color: #ffffff;
 	font-family: Arial;
 	font-size: 14px;
 	font-weight: 700;
@@ -25,11 +39,10 @@
 	border: 2px solid rgba(1,1,1,0);
 	&:hover {
 		border-radius: 9px;
-		border: 2px solid #ffffff;
+		border: 2px solid #1f82d8;
 	}
 }
 .menu__tel-link {
-	color: #ffffff;
 	font-family: Arial;
 	text-transform: uppercase;
 	font-size: 14px;
@@ -48,7 +61,6 @@
 	display: block;
 }
 .menu__call-request {
-	color: #ffffff;
 	font-family: "Arial Narrow";
 	font-size: 14px;
 	font-weight: 400;

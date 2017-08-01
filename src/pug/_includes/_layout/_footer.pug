@@ -1,3 +1,37 @@
 footer.footer
-    h2 footer
-    
+	.first-line
+		.container
+			.logo__block
+				a(href='#').logo__footer
+					img(src='img/logo.white.svg')
+				p.text  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			.menu__block
+				.menu-footer__item
+					a.menu-footer__link.item_accent(href='#') Главная
+				ul.menu-footer
+					each item in [['Компания'],['Прайс'],['Контакты'],['Наши работы'],['Новости']]
+						li.menu-footer__item
+							a.menu-footer__link=item[0]
+			.services__block
+				.services-menu__item
+					a.services-menu__link.item_accent(href='#') Услуги
+				ul.services-footer
+					each item in [['Ремонт квартир'],['Ремонт офисов'],['Отделочные работы'],['Перепланировка'],['Ремонт коттеджей'],['Дизайн']]
+						li.services-menu__item
+							a.services-menu__link(href='#')=item[0]
+			.socials__block
+				ul.socials__list
+					each item in [['vk.svg','vk'],['inst.svg','instagram'],['fb.svg','facebook']]
+						li.socials__item
+							a.socials__link(href='#' class=item[1])
+								img(src='img/icons/'+item[0], alt=item[1])
+				.company-data
+					p ООО "СКН"
+					p ИНН 14829384756
+					p ОГРН 859403817263547
+				a(href='#').search Поиск
+	.second-line
+		.container
+			p.corp 2011-2017 ООО «СКН» Представленная информация на сайте не является публичной офертой.       
+			a.confidence(href='#') Политика конфиденциальности
+			a.site__creator(href='#') Разработка сайта

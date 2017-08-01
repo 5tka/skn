@@ -1,0 +1,156 @@
+.footer {
+	color: #fff;
+	.first-line {
+		.container {
+			padding-top: 35px;
+			padding-bottom: 45px;
+			display: flex;
+			justify-content: space-between;
+		}
+		background-color: #010a21;
+	}
+	.second-line {
+		a {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		.container {
+			padding-top: 18px;
+			padding-bottom: 18px;
+			display: flex;
+			justify-content: space-between;
+		}
+		background-color: #000000;
+		color: #333333;
+		font-family: Arial;
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+	}
+
+	.logo__footer {
+		display: inline-block;
+		width: 184px;
+		height: 72px;
+		margin-bottom: 25px;
+		img {
+			width: 100%;
+		}
+	}
+	.logo__block {
+		width: 185px;
+		.text {
+			width: 170px;
+			color: #ffffff;
+			font-family: "Arial Narrow";
+			font-size: 11px;
+			font-weight: 400;
+			line-height: 14px;
+		}
+	}
+
+	.menu__block {
+		width: 280px;
+	}
+	.menu-footer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.menu-footer__item {
+		width: 50%;
+		padding-right: 10px;
+	}
+	.menu-footer__link {
+		color: #fefefe;
+		font-family: Arial;
+		font-size: 20px;
+		line-height: 40px;
+		font-weight: 400;
+		&.item_accent {
+			font-weight: 700;
+		}
+	}
+	.services__block {
+		width: 340px;
+	}
+
+	.services-menu__item {
+		width: 50%;
+		padding-right: 20px;
+	}
+	.services-menu__link {
+		&.item_accent {
+			font-family: Arial;
+			font-weight: 700;
+		}
+		font-size: 18px;
+		line-height: 36px;
+		font-family: "Arial Narrow";
+		font-weight: 400;
+	}
+	.services-footer {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.socials__block {
+		width: 140px;
+		text-align: right;
+	}
+	.socials__list {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 20px;
+	}
+	.socials__item {
+		margin-left: 25px;
+	}
+	.socials__link {
+		display: inline-block;
+		img {
+			width: 100%;
+			max-width: 100%;
+			display: inline-block;
+		}
+		&.vk {
+			width: 23px;
+			height: 13px;
+		}
+		&.instagram {
+			width: 16px;
+			height: 16px;
+		}
+		&.facebook {
+			width: 17px;
+			height: 17px;
+		}
+	}
+	.company-data {
+		text-align: right;
+		font-family: "Arial Narrow";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 24px;
+		margin-bottom: 10px;
+	}
+	.search {
+		font-family: "Arial Narrow";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 18px;
+		&:before {
+			margin-right: 10px;
+			content: '';
+			display: inline-block;
+			width: 10px;
+			height: 10px;
+			background-image: url(../img/icons/look.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

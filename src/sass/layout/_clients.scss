@@ -4,10 +4,46 @@
 		padding-top: 60px;
 		padding-bottom: 55px;
 	}
-	.setion-title {
+	.section-title {
 		margin-bottom: 33px;
 	}
 }
+
+.clients__slider-wrap {
+	max-width: 1060px;
+	margin: 0 auto;
+	position: relative;
+	padding-left: 30px;
+	padding-right: 30px;
+	.owl-prev {
+		position: absolute;
+		top: 50%; 
+		margin-top: -15px;
+		left: 0; 
+		font-size: 0;
+		@include sprite($slider-arr-black-l)
+		&:hover {
+			@include sprite($slider-arr-blue-l)
+		}
+	}
+	.owl-next {
+		position: absolute;
+		top: 50%; 
+		margin-top: -15px;
+		right: 0; 
+		font-size: 0;
+		@include sprite($slider-arr-black-r)
+		&:hover {
+			@include sprite($slider-arr-blue-r)
+		}
+	}
+}
+.clients__slider {
+	margin: 0 auto;
+	max-width: 980px;
+	
+}
+
 .clients-slide {
 	padding-left: 10px;
 	padding-right: 10px;

@@ -34,6 +34,7 @@ var path = {
     },
     src: { //Пути откуда брать исходники
         pug: ['src/pug/*.pug','!src/pug/_*.pug'], //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
+        pugIncludes: ['src/_includes/*.pug'], 
         js: 'src/js/*.js',//В стилях и скриптах нам понадобятся только main файлы
         jsVendor: 'src/js/vendor/*.js',//В стилях и скриптах нам понадобятся только main файлы
         scss: ['src/sass/**/*.scss','src/sass/**/*.sass'],
@@ -205,6 +206,11 @@ gulp.task('default', ['pug-includes','sprite','sass-dev','img','js-vendor','js',
     });
     watch(path.watch.imgSprite, function() {
       gulp.start('sprite');
+    });
+
+      // слежка тільки коли треба щоб компілились сторінки при зміні частин які імпортуються частин header / footer 
+    watch(path.watch.pugIncludes, function() {
+      gulp.start('pug-includes');
     });
 
     watch(path.watch.pug, function() {
