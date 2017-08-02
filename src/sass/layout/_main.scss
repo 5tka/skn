@@ -234,12 +234,12 @@
 .adv-dscr {
     span {
         text-transform: uppercase;
-        border-bottom: 3px solid $ac;
+        text-decoration: underline;
         font-size: 18px;
         font-weight: bold;
         color: $ac;
         display: inline-block;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     p {
         font-size: 24px;

@@ -1,0 +1,205 @@
+extends _layout.pug
+block main
+    section.about-into
+        .container
+            p.intro-dscr.
+                Строительные работы в компании СКН 
+                осуществляются с использованием 
+                современных качественных материалов и 
+                инновационных технологий, главная особенность 
+                которых – полная безопасность для человека. 
+                Специалисты компании работают с широким 
+                спектром материалов, в том числе с 
+                древесиной, поэтому каждый клиент сможет 
+                самостоятельно выбрать, какой должна быть 
+                отделка квартир или дома. 
+    section.advantages-section.about_advantages-section
+        .container
+            .advantages-wrapper
+                .adv-title
+                    |  преимущества
+                .advantages-items.about_advantages-items
+                    .about_advantages-item
+                        .about_adv-img-wrap
+                            .about_adv-img 
+                                img(src="img/advantages/security.svg", alt="")
+                            .about_adv-title
+                                span гарантия  3 года 
+                        .about_adv-dscr 
+                            p.
+                                Предоставляем гарантию на все виды работ в течение 2 лет с момента сдачи.
+                    .about_advantages-item
+                        .about_adv-img-wrap
+                            .about_adv-img 
+                                img(src="img/advantages/purpose.svg", alt="")
+                            .about_adv-title
+                                span точные сроки
+                        .about_adv-dscr 
+                            p.
+                                Мы строго соблюдаем сроки сдачи, согласно указанной дате в договоре. 
+                    .about_advantages-item
+                        .about_adv-img-wrap
+                            .about_adv-img 
+                                img(src="img/advantages/spanner.svg", alt="")
+                            .about_adv-title
+                                span ТЕХНИЧЕСКИЙ НАДЗОР
+                        .about_adv-dscr 
+                            p.
+                                Все работы ведутся при соблюдении действующих СНИПов и ГОСТов.
+                    .about_advantages-item
+                        .about_adv-img-wrap
+                            .about_adv-img 
+                                img(src="img/advantages/master.svg", alt="")
+                            .about_adv-title
+                                span ПРОФЕССИОНАЛЬНЫЕ СОТРУДНИКИ
+                        .about_adv-dscr 
+                            p.
+                                Работы выполняются опытными мастерами.
+                    .about_advantages-item
+                        .about_adv-img-wrap
+                            .about_adv-img 
+                                img(src="img/advantages/quality.svg", alt="")
+                            .about_adv-title
+                                span контроль качества
+                        .about_adv-dscr 
+                            p.
+                                Мы осуществляем жесткий контроль качества на каждом этапе работ.
+    section.work-section
+        .container
+            .work-wrapper
+                .adv-title
+                    |  Как мы работаем
+                .work-items 
+                    .work-item  
+                        .w-img
+                            img(src="img/work/phone.svg", alt="")
+                        .w-dscr 
+                            p.
+                                Вы звоните нам по телефону <br> 
+                                (921) 444 9 <br>
+                                 или оставляете заявку 
+                                НА САЙТЕ
+                    .work-item  
+                        .w-img
+                            img(src="img/work/ruler.svg", alt="")
+                        .w-dscr 
+                            p.
+                                Наш замерщик <br>
+                                БЕСПЛАТНО <br>
+                                выезжает к Вам, 
+                                в любое удобное для Вас время
+                    .work-item  
+                        .w-img
+                            img(src="img/work/pencil.svg", alt="")
+                        .w-dscr 
+                            p.
+                                БЕСПЛАТНО <br>
+                                составляем в течение
+                                5-ти часов подробную смету и 
+                                направляем её вам на согласование
+                    .work-item  
+                        .w-img
+                            img(src="img/work/grip.svg", alt="")
+                        .w-dscr 
+                            p.
+                                Заключаем договор. В котором прописываем гарантийный <br> срок <br>
+                                 5 (пять) лет
+                    .work-item  
+                        .w-img
+                            img(src="img/work/check.svg", alt="")
+                        .w-dscr 
+                            p.
+                                Приступаем к КАЧЕСТВЕННОМУ
+                                выполнению работ
+
+    section.team-section
+        .container
+            .team-wrapper
+                .adv-title
+                    |  Как мы работаем
+        .team-container
+
+    section.services-section
+            .container
+                .services-wrapper
+                    .serv-title
+                        | услуги
+                    .services-items
+                        .services-item
+                            .services-content
+                                .serv-img
+                                    img(src="img/services/serv-1.jpg", alt="")
+                                .serv-dscr-wrap
+                                    .serv-dscr
+                                        p
+                                            | Ремонт коттеджей
+                            .serv-dscr-wrap--hidden.u-up
+                                .serv-dscr--hidden
+                                    p
+                                        | Ремонт коттеджей
+                                    i
+                                        | офисы, бизнесс-центры, рестораны
+                                    a(href="#").btn
+                                        | Подробнее  >>
+                        .services-item
+                            .services-content
+                                .serv-img
+                                    img(src="img/services/serv-2.jpg", alt="")
+                                .serv-dscr-wrap
+                                    .serv-dscr
+                                        p
+                                            | Ремонт комнатных <br> помещений
+                            .serv-dscr-wrap--hidden.d-down
+                                .serv-dscr--hidden
+                                    p
+                                        | Ремонт коттеджей
+                                    i
+                                        | офисы, бизнесс-центры, рестораны
+                                    a(href="#").btn
+                                        | Подробнее  >>
+                        .services-item
+                            .services-content
+                                .serv-img
+                                    img(src="img/services/serv-3.jpg", alt="")
+                                .serv-dscr-wrap
+                                    .serv-dscr
+                                        p
+                                            | Ремонт фасадов <br> зданий
+                            .serv-dscr-wrap--hidden.u-up
+                                .serv-dscr--hidden
+                                    p
+                                        | Ремонт коттеджей
+                                    i
+                                        | офисы, бизнесс-центры, рестораны
+                                    a(href="#").btn
+                                        | Подробнее  >>
+                        .services-item
+                            .services-content
+                                .serv-img
+                                    img(src="img/services/serv-4.jpg", alt="")
+                                .serv-dscr-wrap
+                                    .serv-dscr
+                                        p
+                                            | Высотные работы
+                            .serv-dscr-wrap--hidden.d-down
+                                .serv-dscr--hidden
+                                    p
+                                        | Ремонт коттеджей
+                                    i
+                                        | офисы, бизнесс-центры, рестораны
+                                    a(href="#").btn
+                                        | Подробнее  >>
+    section.feedback-section
+        .container
+            .feedback-container.clearfix
+                .feedback-dscr.fl-l
+                    span
+                        | оставьте заявку
+                    p.
+                        И мы рассчитаем стоимость и сроки выполнения <br> ремонтно-отделочных работ совершенно <br> бесплатно
+                .feedback-form-wrapper.fl-r
+                    form(action="/").f-form
+                        span.f-title Телефон
+                        label.l-phone(for="phone")
+                            input.i-phone(type="text" placeholder="Ваш телефон")
+                        button(type="submit").b-submit оставить заявку

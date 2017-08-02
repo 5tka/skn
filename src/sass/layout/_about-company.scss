@@ -1,0 +1,155 @@
+.about-into {
+    padding:  {
+        top: 70px;
+        bottom: 40px;
+    }
+}
+.intro-dscr {
+    color: #000;
+    font-size: 24px;
+    line-height: 42px;
+}
+// 
+.about_advantages-section {
+    background: url("../img/about-company/bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    z-index: 1;
+}
+.about_advantages-items {
+    justify-content: flex-start;
+}
+.about_advantages-item {
+    width: 33%;
+    margin-bottom: 40px;
+    margin-right: .5%;
+    &:nth-child(3n) {
+        margin-right: 0;
+    }
+}
+.about_adv-img-wrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.about_adv-img {
+    position: relative;
+    margin-right: 35px;
+    &:before {
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background: #fff200;
+        border-radius: 50%;
+        z-index: -1;
+        right: -10px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    width: 45px;
+    height: 60px;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.about_adv-title {
+    span {
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-size: 18px;
+        font-weight: bold;
+        color: #0b2435;
+        display: inline-block;
+        line-height: 30px;
+        letter-spacing: 1px;
+    }
+}
+.about_adv-dscr {
+    p {
+        font-size: 21px;
+        color: #000;
+        line-height: 40px;
+        padding-right: 10px;
+        letter-spacing: -.5px;
+    }
+}
+// work
+
+.work-section {
+    padding:  {
+        top: 80px;
+        bottom: 45px;
+    }
+}
+.work-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.work-item {
+    width: 19.5%;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .2);
+    @include border-radius(4px);
+    position: relative;
+    &:after {
+        content: "";
+        position: absolute;
+        background-image: url(../img/sprite.png);
+        width: 24px;
+        height: 36px;
+        background-position: -87px -46px;
+        top: 50%;
+        left: -12px;
+        margin-top: -18px;
+    }
+    &:first-child{
+        &:after{
+            content: none;
+        }
+    }
+}
+.w-img {
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    img {
+        width: 65px;
+        height: 65px;
+        vertical-align: middle;
+    }
+}
+.w-dscr {
+    padding:  {
+        top: 10px;
+        right: 10px;
+        left: 10px;
+        bottom: 20px;
+    }
+    p {
+        font-size: 13px;
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+        line-height: 19px;
+        letter-spacing: -.5px;
+    }
+}
+// team
+
+.team-section{
+    padding: {
+        top: 40px;
+    }
+}
+.team-container{
+    background: url('../img/team-bg.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 470px;
+}
