@@ -1,24 +1,20 @@
-.find-us {
+	.find-us {
 	.section-title {
 		padding-top: 35px;
 	}
 }
 .find-us__map {
-	height: 480px;
+	position: inherit !important;
+	overflow: visible !important;
+	// height: 480px;
 }
 .find-us__wrapper {
 	position: relative;
+	overflow: hidden;
+	min-height: 480px;
 	.container  {
-    width: 100%;
-    max-width: 1240px;
     padding-left: 70px;
-    padding-right: 30px;
     padding-top: 90px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
 	}
 }
 .find-us__block  {

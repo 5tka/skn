@@ -1,6 +1,11 @@
 .footer {
 	color: #fff;
 	.first-line {
+		a{ 
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 		.container {
 			padding-top: 35px;
 			padding-bottom: 45px;
@@ -41,7 +46,6 @@
 	.logo__block {
 		width: 185px;
 		.text {
-			width: 170px;
 			color: #ffffff;
 			font-family: "Arial Narrow";
 			font-size: 11px;
