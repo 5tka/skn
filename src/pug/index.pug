@@ -1,4 +1,20 @@
 extends _layout.pug
+
+block header 
+	header.header.main-page__header
+		.container
+			a(href='/').logo__link
+				img(src='img/logo.white.svg')
+			menu.header__menu
+				-var list = ['Главная','О компании','прайс','услуги','наши работы','Новости','контакты']
+				each item in list 
+					li.menu__item
+						a.menu__link(href='#')=item
+				li.menu__item.menu__tel
+					a.menu__tel-link(href='tel:+78129214449') 
+						span +7 (812) 
+						span.accent 921‑44-49
+					a.menu__call-request(href='#') Заказать звонок!
 block main
 	section.main__slider.owl-carousel
 		each item in [1,2]
@@ -193,7 +209,7 @@ block main
 						button(type="submit").b-submit оставить заявку
 	section.portfolio-gallery
 		.container 
-			h2.setion-title ГАЛЕРЕЯ РАБОТ
+			h2.section-title ГАЛЕРЕЯ РАБОТ
 			.portfolio-gallery__slider-wrap
 				.portfolio-gallery__slider.owl-carousel
 					each item in [['img/slider/gallery/work-gallery_1.jpg','Магазин «Vinotti» в МК «Интерио»'],['img/slider/gallery/work-gallery_2.jpg','Магазин «Леонардо» в ТК «Гуливер»'],['img/slider/gallery/work-gallery_3.jpg','Магазин «Леонардо» в ТРК «Европолис»'],['img/slider/gallery/work-gallery_3.jpg','Магазин «Леонардо» в ТРК «Европолис»']]
@@ -203,16 +219,16 @@ block main
 							p.work__title=item[1]
 	section.clients
 		.container 
-			h2.setion-title НАШИ КЛИЕНТЫ
+			h2.section-title НАШИ КЛИЕНТЫ
 			.clients__slider-wrap
 				.clients__slider.owl-carousel
-					each item in [['img/slider/clients/ikea.png','IKEA'],['img/slider/clients/gallery.png','Галлерея'],['img/slider/clients/sberbank.png','СберБанк России'],['img/slider/clients/tinkoff.png','Tinkoff'],['img/slider/clients/vtb24.png','ВТБ24']]
+					each item in [['img/slider/clients/ikea.png','IKEA'],['img/slider/clients/gallery.png','Галлерея'],['img/slider/clients/sberbank.png','СберБанк России'],['img/slider/clients/tinkoff.png','Tinkoff'],['img/slider/clients/vtb24.png','ВТБ24'],['img/slider/clients/vtb24.png','ВТБ24']]
 						a.clients-slide(href='#')
 							.clients-image__wrap
 								img(src=item[0] alt=item[1])
 	section.reviews
 		.container 
-			h2.setion-title НАШИ КЛИЕНТЫ
+			h2.section-title ОТЗЫВЫ
 			.reviews__slider-wrap
 				.reviews__slider.owl-carousel
 					each item in [['img/slider/reviews/author1.jpg','Анастасия Смольная','директор вет. лабаратории','Мы довольны работой, все очень аккуратно, качественно и быстро.  По ходу выполнения строительных работ можно обратиться к дизайнеру для уточнения или корректировок. Очень ответственно отнеслись к поставленной задаче. Большое спасибо!'],['img/slider/reviews/author2.jpg','Александр Микулин','директор вет. лабаратории','Мы остались довольны проделанной работой, все очень аккуратно, качественно и быстро. Ответственное отношение, все сроки соблюдены.  По ходу выполнения строительных работ можно обратиться к дизайнеру для уточнения или корректировок. Очень полезная для нас оказалась вещь. Очень много плюсов. Остались довольны. Большое спасибо!'],['img/slider/reviews/author3.jpg','Наталья Давыдова','директор вет. лабаратории','Мы довольны работой, все очень аккуратно, качественно и быстро.  По ходу выполнения строительных работ можно обратиться к дизайнеру для уточнения или корректировок.  Cпасибо за хорошо проделанную работу! Осталось довольна!'],['img/slider/reviews/author3.jpg','Наталья Давыдова','директор вет. лабаратории','Мы довольны работой, все очень аккуратно, качественно и быстро.  По ходу выполнения строительных работ можно обратиться к дизайнеру для уточнения или корректировок.  Cпасибо за хорошо проделанную работу! Осталось довольна!']]
@@ -225,3 +241,36 @@ block main
 										p.name=item[1]
 										p.position=item[2]
 								.review__text=item[3]
+	section.find-us
+		.container 
+			h2.section-title как нас найти
+		.find-us__wrapper
+			.container 
+				.find-us__map#find-us__map
+				.find-us__block 
+					p.block-title Офис
+					.block-inner
+						p.line.metro м. Крестовский остров
+						p.line.metro м. Старая Деревня
+						p.line.metro м. Черная речка
+						p.line.adress Липовая аллея, 9, лит. А
+						a.line.tel(href='tel:78129214449') +7 812 921‑44-49
+						p.line.work-time С 9:00 до 20:00 без выходных
+					a.directions(href='#') схема проезда к офису
+	section.skn-form__section
+		.container 
+			h2.skn-form__title Узнай о ремонте СКН
+			form.skn-form
+				p.skn-form__text Оставьте вашу заявку здесь и мы ответим на все ваши вопросы!
+				.fields
+					.inputs__wrap
+						label
+							span.text Телефон
+							input.field(type='text' placeholder='Ваш телефон')
+						label
+							span.text Имя
+							input.field(type='text' placeholder='Ваше имя')
+					label
+						span.text Напишите свой вопрос здесь
+						textarea.field(type='text' placeholder='Ваше сообщение')
+				button(type='submit').submit ОСТАВИТЬ ЗАЯВКУ

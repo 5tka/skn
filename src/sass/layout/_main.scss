@@ -46,7 +46,7 @@
         color: #000;
         font-weight: bold;
         font-size: 18px;
-        margin-bottom: 45px;
+        margin-bottom: 15px;
         min-height: 55px;
     }
     span {
@@ -197,6 +197,8 @@
     margin-bottom: 60px;
 }
 .advantages-items {
+    max-width: 1060px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -204,10 +206,16 @@
 .advantages-item {
     width: 49%;
     display: flex;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
+    &:nth-of-type(odd) {
+        padding-right: 30px;
+    }
+    &:nth-of-type(even) {
+        padding-left: 30px;
+    }
 }
 .adv-img-wrap {
-    margin-right: 35px;
+    margin-right: 40px;
 }
 .adv-img {
     position: relative;
@@ -232,17 +240,19 @@
     }
 }
 .adv-dscr {
+    margin-top: 15px;
     span {
         text-transform: uppercase;
-        text-decoration: underline;
-        font-size: 18px;
+        border-bottom: 3px solid $ac;
+        font-size: 16px;
+        letter-spacing: 1px;
         font-weight: bold;
         color: $ac;
         display: inline-block;
-        margin-bottom: 25px;
+        margin-bottom: 22px;
     }
     p {
-        font-size: 24px;
+        font-size: 21px;
         color: #000;
         line-height: 42px;
     }

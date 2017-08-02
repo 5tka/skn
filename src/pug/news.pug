@@ -1,0 +1,29 @@
+extends _layout.pug
+
+include ./_includes/_layout/_pagination.pug
+block main 
+	section.news-accent
+		.news-accent__bg(style='background-image: url(img/news/accent.jpg)')
+		.container 
+			.news-accent__block
+				.news-accent__title Поздравляем вас! <br> с наступающим Новым годом!
+				.news-accent__text 
+					p Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. 
+			a(href='#').news-accent__down-link 
+	section.news-block
+		.container 
+			ul.news__list
+				-for (var x=0;x<4; x++)
+					each item in [['25..01.2016','Сбербанк снизил ставку по ипотеке на квартиры от СК «СКН»','Интерьерный проект от дизайнера подразумевает не только грамотную планировку.'],['25..01.2016','Две последние квартиры с видом на Лахтинский разлив. Ключи сразу!','Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. ']]
+						li.news__item
+							.news__item-inner
+								.news__img-wrap
+									img(src='img/news/news1.jpg')
+									.date=item[0]
+								.news__content
+									.news__title=item[1]
+									.news__text=item[2]
+									.news__footer
+							a.news__details-link(href='#') подробнее
+			+pagination
+
