@@ -1,0 +1,85 @@
+.services{
+  width:1240px;
+  margin: 0 auto;
+  &__title{
+    margin-bottom: 44px;
+    height:320px;
+    background-image: url("../img/services/services-background.png");
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    background-position: center right;
+    position: relative;
+    .title-wrap{
+      position: absolute;
+      top:88px;
+      left:110px;
+      max-width:430px;
+      .main-title{
+        font-size:34px;
+        margin-bottom:20px;
+        line-height:45px;
+      }
+      .title-caption{
+        font-size:14px;
+        text-transform: uppercase;
+        line-height: 23px;
+      }
+    }
+  }
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom:75px;
+    .services__item{
+      width:24%;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    .services__image{
+      height:200px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat:no-repeat;
+      margin-bottom:15px;
+      &_cottage{
+        background-image: url("../img/services/cottage.png");
+      }
+      &_high{
+        background-image: url("../img/services/high.png")
+      }
+      &_facade{
+        background-image: url("../img/services/facade.png")
+      }
+      &_room{
+        background-image: url("../img/services/room.png")
+      }
+    }
+    .services__name{
+      .name{
+        font-size:18px;
+        font-weight: bold;
+        margin-bottom:25px;
+      }
+      .caption{
+        font-style: italic;
+        font-size:16px;
+      }
+    }
+  }
+  &__pre-footer{
+    padding: 0 97px;
+    .pre-footer__title{
+      font-size:18px;
+      text-transform: uppercase;
+      padding-left:15px;
+      margin-bottom: 40px;
+    }
+    .pre-footer__caption{
+      font-size:14px;
+      line-height:22px;
+      color: #494646;
+    }
+  }
+}
