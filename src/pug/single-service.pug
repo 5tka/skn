@@ -55,7 +55,7 @@ block main
                         .form__content
                             label.service-label(for='inputs1') Телефон
                             .inputs-wrap
-                                input.service-input(type="text" id='inputs1')
+                                input.service-input(type="text" id='inputs1' placeholder="Ваш телефон")
                                 button.button.button_orange(type='submit') Заказать
 
         article.values__item.values__item_right-image
@@ -73,7 +73,7 @@ block main
                         .form__content
                             label.service-label(for='inputs2') Телефон
                             .inputs-wrap
-                                input.service-input(type="text" id='inputs2')
+                                input.service-input(type="text" id='inputs2' placeholder="Ваш телефон")
                                 button.button.button_orange(type='submit') Заказать
                 .image-wrap
                     img(src='img/single-service/single-service-bg4.png')
@@ -94,7 +94,7 @@ block main
                         .form__content
                             label.service-label(for='inputs2') Телефон
                             .inputs-wrap
-                                input.service-input(type="text" id='inputs2')
+                                input.service-input(type="text" id='inputs2' placeholder="Ваш телефон")
                                 button.button.button_orange(type='submit') Заказать
 
     section.discount
@@ -112,20 +112,80 @@ block main
                         input.service-input(type="text" placeholder='1м')
                 .forms
                     .forms-item
-                        .forms-item__title
+                        .forms-item__title Тариф 1
                         .forms-item__wrap
                             form(action="/")
                                 .inputs-wrap
-                                    label.inputs-label(for="input1")
+                                    label.inputs-label(for="input1") Цена
                                     input.service-input.inputs(id="input1")
                                 .inputs-wrap
-                                    label.inputs-label(for="input2")
+                                    label.inputs-label(for="input2") Стоимость
                                     input.service-input.inputs(id="input2")
                                 .inputs-wrap.inputs-wrap-inline
-                                    label.inputs-label(for="input3")
+                                    label.inputs-label(for="input3") Скидка
                                     input.service-input.inputs(id="input3")
                                 .forms-item__discount
                                     | -15 000 руб
                                 .forms-item__buttons
-                                    button.button.button_orange(type="button")
+                                    button.button.button_orange(type="button") Заказать
+                    .forms-item
+                        .forms-item__title Тариф 1
+                        .forms-item__wrap
+                            form(action="/")
+                                .inputs-wrap
+                                    label.inputs-label(for="input1") Цена
+                                    input.service-input.inputs(id="input1")
+                                .inputs-wrap
+                                    label.inputs-label(for="input2") Стоимость
+                                    input.service-input.inputs(id="input2")
+                                .inputs-wrap.inputs-wrap-inline
+                                    label.inputs-label(for="input3") Скидка
+                                    input.service-input.inputs(id="input3")
+                                .forms-item__discount
+                                    | -15 000 руб
+                                .forms-item__buttons
+                                    button.button.button_orange(type="button") Заказать
+                    .forms-item
+                        .forms-item__title Тариф 1
+                        .forms-item__wrap
+                            form(action="/")
+                                .inputs-wrap
+                                    label.inputs-label(for="input1") Цена
+                                    input.service-input.inputs(id="input1")
+                                .inputs-wrap
+                                    label.inputs-label(for="input2") Стоимость
+                                    input.service-input.inputs(id="input2")
+                                .inputs-wrap.inputs-wrap-inline
+                                    label.inputs-label(for="input3") Скидка
+                                    input.service-input.inputs(id="input3")
+                                .forms-item__discount
+                                    | -15 000 руб
+                                .forms-item__buttons
+                                    button.button.button_orange(type="button") Заказать
+
+    section.price
+        .container
+            .price__caption
+                |Для каждого, кто хочет сделать ремонт, это один важнейших вопросов.  И этот вопрос самый сложный потому, что даже средненький ремонт содержит в себе несколько десятков позиций наименований работ.
+            h2.page-title Примеры работ
+            .price__table
+                | Место для прайса
+            .price__buttons
+                button.button.button_grey(type='submit') Скачать пример сметы
+                button.button.button_grey(type='submit') Запросить расчёт сметы
+    section.service-design_background-accent.last
+        .bg(style='background-image: url("img/single-service/single-service-bg1.png")')
+        .container
+            .text-wrap
+                h2.main-title
+                    | Записаться на просмотр объекта в работе
+                form.form(action="/")
+                    .form__content
+                        label.service-label(for='inputs1') Телефон
+                        .inputs-wrap
+                            input.service-input(type="text" id='inputs1' placeholder="Ваш телефон")
+                            button.button.button_orange(type='submit') Заказать
+
+
+
 

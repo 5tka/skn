@@ -1,13 +1,15 @@
 extends _layout.pug
 block main
-    section.services
-        .services__title
-            .title-wrap
+    section.services__title
+        .bg(style='background-image: url("../img/single-service/single-service-bg1.png")')
+        .container
+            .text-wrap
                 h2.main-title
                     | Широкий спектр ремонтных услуг
                 .title-caption
                     | С учетом Ваших требований и нашего опыта, мы предложим наиболее оптимальные технологии и материалы.
-        .services__list
+    section.services__list
+        .container
             a.services__item(href='#')
                 .services__image.services__image_cottage
                 .services__name
@@ -36,7 +38,8 @@ block main
                         | Ремонт комнатных помещений
                     .caption
                         | офисы, бизнесс-центры, рестораны
-        .services__pre-footer
+    section.services__pre-footer
+        .container
             .pre-footer__title
                 | Поздравляем вас с наступающими праздниками
             .pre-footer__caption

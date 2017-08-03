@@ -12,6 +12,7 @@ h2.page-title {
   line-height: 45px;
   border: 1px solid #e2e2e2;
   border-radius: 6px;
+  padding-left:20px;
 }
 
 .button {
@@ -23,20 +24,27 @@ h2.page-title {
   text-align: center;
   color: #000000;
 }
-
 .button_orange {
   background-color: #fff200;
+  &:hover{
+    background-color: #e7da00;
+  }
+  &:active{
+    background-color: #c4b900;
+  }
 }
+.button_grey{
+  width:340px;
+  color: #ffffff;
+  background-color: #d7d7d7;
+  &:hover{
+    background-color: #1f81d1;
+  }
+  &:active{
+    background-color: #1c6aae;
 
-.Rounded_Rectangle_1 {
-  position: absolute;
-  left: 1020px;
-  top: 2835px;
-  width: 180px;
-  height: 47px;
-  z-index: 76;
+  }
 }
-
 section.service-design_background-accent {
   min-height: 320px;
   position: relative;
@@ -70,6 +78,32 @@ section.service-design_background-accent {
       text-transform: uppercase;
       line-height: 23px;
       font-weight: bold;
+    }
+  }
+  .form {
+    &__title {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 30px;
+    }
+    &__content {
+      .service-label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      .inputs-wrap {
+        @include clearfix;
+        .service-input {
+          float: left;
+          width: 68%;
+        }
+        .button {
+          float: right;
+          width: 28%;
+        }
+      }
+
     }
   }
 }
@@ -230,6 +264,7 @@ section.discount {
   }
   .discount__form{
     .areas{
+      margin-bottom:30px;
       &__caption{
         text-transform: uppercase;
         text-align: center;
@@ -240,9 +275,97 @@ section.discount {
         .service-input{
           width:80px;
           text-align: center;
+          padding-left:0;
         }
+      }
+    }
+    .forms{
+      display: flex;
+      justify-content: space-between;
+      .forms-item{
+        width:31%;
+      }
+    }
+    .forms-item__title{
+      text-align: center;
+      font-size:14px;
+      text-transform: uppercase;
+      margin-bottom:17px;
+    }
+    .forms-item__wrap{
+      background-color: #ffffff;
+      padding-top: 20px;
+      border: 1px solid #e2e2e2;
+      .inputs-wrap{
+        margin-bottom:20px;
+        padding: 0 20px;
+        label{
+          font-weight: bold;
+          font-size:14px;
+          padding-left:10px;
+          margin-bottom:5px;
+        }
+        .service-input{
+          width:100%;
+        }
+      }
+      .inputs-wrap-inline{
+        display: flex;
+        justify-content: space-between;
+        label{
+          width:50%;
+          height:45px;
+          line-height:45px;
+        }
+        .service-input{
+          width:50%;
+        }
+      }
+    }
+    .forms-item__discount{
+      text-align: center;
+      height:45px;
+      line-height:45px;
+      border-top: 1px solid #e2e2e2;
+      opacity: 0.5;
+    }
+    .forms-item__buttons{
+      text-align: center;
+      height:45px;
+      line-height:45px;
+      border-top: 1px solid #e2e2e2;
+      border-bottom: 1px solid #e2e2e2;
+      .button{
+        width:100%;
       }
     }
   }
 }
 
+//Price
+section.price{
+  padding-top:65px;
+  margin-bottom:80px;
+  .price__caption{
+    padding: 0 70px;
+    margin-bottom:50px;
+  }
+  .price__table{
+    //--------------
+    height:300px;
+    //--------------
+    margin-bottom: 50px;
+  }
+  .price__buttons{
+    display: flex;
+    justify-content: center;
+    .button{
+      margin-right:20px;
+    }
+  }
+}
+
+//Last
+section.service-design_background-accent.last {
+  margin-bottom:0;
+}
