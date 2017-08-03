@@ -1,4 +1,5 @@
 extends _layout.pug
+include ./_includes/_layout/_pagination.pug
 block main
     section.works-section
         .container
@@ -98,4 +99,5 @@ block main
                         span 
                             | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
                         a(href="#")
-                            | смотреть        
+                            | смотреть
+            +pagination

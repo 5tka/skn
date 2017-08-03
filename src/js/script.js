@@ -1,5 +1,8 @@
 $(document).ready(function() { // начало document.ready
 
+	$('.w-p_slider-list').bxSlider({
+		pagerCustom: '#slider-controls'
+	});
 	$('.main__slider').owlCarousel({
 		items: 1,
 		nav: true
@@ -22,6 +25,9 @@ $(document).ready(function() { // начало document.ready
 	$('.gallery-item:nth-child(4)').
 		css('margin-left', margin_left);
 	
+	var containerEl = document.querySelector('.works_gallery-items');
+	var mixer = mixitup(containerEl);
 
-    
+
+
 }); // конец document.ready

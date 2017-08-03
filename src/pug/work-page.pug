@@ -1,0 +1,59 @@
+extends _layout.pug
+block main
+    section.work_page-section
+        .container
+            .work_page-wrapper
+                h3.w-p-title
+                    | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
+                ul.w-p_slider-list
+                    li.w-p_slider-item
+                        img(src="http://via.placeholder.com/1100x375", alt="")
+                    li.w-p_slider-item
+                        img(src="img/work-page/w-1.jpg", alt="")
+                    li.w-p_slider-item
+                        img(src="http://via.placeholder.com/1100x375", alt="")
+                #slider-controls
+                    a(data-slide-index='0', href='')
+                        img(src='http://via.placeholder.com/92x92')
+                    a(data-slide-index='1', href='')
+                        img(src='img/work-page/thumb/t-2.jpg')
+                    a(data-slide-index='2', href='')
+                         img(src='http://via.placeholder.com/92x92')
+            .work_page-info.clearfix
+                .w_p-i
+                    span
+                        | Информация
+                    p.
+                        Расположение: ул. Михаила Дудина, г. Санкт-Петербург <br>
+                        Площадь: 72 кв. метра <br>
+                        Стоимость работ: 640 000 руб. <br>
+                        Cтоимость черновых материалов: 360 000 руб. <br>
+                        Тарифный план: Комфорт ремонт <br>
+                        Срок выполнения: 3,5 месяца
+                .w_p-i
+                    span
+                        | Описание
+                    p.
+                        Комплексная отделка 3-х комнатной квартиры в <br>
+                        новостройке под ключ.<br>
+                        Выполнены электромонтажные и сантехнические <br> 
+                        работы. Произведена отделка стен, потолков, полов.
+                a(href="#").view-works
+                    | Все проекты >>
+    section.skn-form__section
+        .container 
+            h2.skn-form__title Узнай о ремонте СКН
+            form.skn-form
+                p.skn-form__text Оставьте вашу заявку здесь и мы ответим на все ваши вопросы!
+                .fields
+                    .inputs__wrap
+                        label
+                            span.text Телефон
+                            input.field(type='text' placeholder='Ваш телефон')
+                        label
+                            span.text Имя
+                            input.field(type='text' placeholder='Ваше имя')
+                    label
+                        span.text Напишите свой вопрос здесь
+                        textarea.field(type='text' placeholder='Ваше сообщение')
+                button(type='submit').submit ОСТАВИТЬ ЗАЯВКУ
