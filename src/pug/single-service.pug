@@ -1,0 +1,131 @@
+extends _layout.pug
+block main
+    section.service-design_background-accent
+        .bg(style='background-image: url("img/single-service/single-service-bg1.png")')
+        .container
+            .text-wrap
+                h2.main-title
+                    | Дизайн интерьера
+                .title-caption
+                    | С учетом Ваших требований и нашего опыта, мы предложим наиболее оптимальные технологии и материалы.
+
+    section.service-design_to-column
+        .container
+            .image-wrap
+                img(src='img/single-service/single-service-bg2.png')
+            .text-wrap
+                h2.main-title
+                    | Дизайн интерьера
+                .small-caption
+                    | От 5000 руб/м
+                .title-caption
+                    | Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. По мнению психологов, гармоничное пространство дома способствует улучшению здоровья человека.Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. По мнению психологов, гармоничное пространство дома способствует улучшению здоровья человека.
+    section.samples
+        .container
+            h2.page-title Примеры работ
+            .sample-row
+                .sample-item
+                    img(src='img/single-service/single-service-example1.jpg')
+                .sample-item
+                    img(src='img/single-service/single-service-example2.jpg')
+                .sample-item
+                    img(src='img/single-service/single-service-example3.jpg')
+            .sample-row
+                .sample-item
+                    img(src='img/single-service/single-service-example4.jpg')
+                .sample-item
+                    img(src='img/single-service/single-service-example5.jpg')
+                .sample-item
+                    img(src='img/single-service/single-service-example6.jpg')
+    section.values
+        article.values__item.values__item_left-image
+            .container
+                .image-wrap
+                    img(src='img/single-service/single-service-bg3.png')
+                .text-wrap
+                    h2.main-title
+                        | Дизайн интерьера
+                    .small-caption
+                        | От 5000 руб/м
+                    .title-caption
+                        |Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. По мнению психологов, гармоничное пространство дома способствует улучшению здоровья человека.Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. По мнению психологов, гармоничное пространство дома способствует улучшению здоровья человека.
+                    form.form(action="/")
+                        .form__title
+                            |Заказать
+                        .form__content
+                            label.service-label(for='inputs1') Телефон
+                            .inputs-wrap
+                                input.service-input(type="text" id='inputs1')
+                                button.button.button_orange(type='submit') Заказать
+
+        article.values__item.values__item_right-image
+            .container
+                .text-wrap
+                    h2.main-title
+                        | Дизайн интерьера
+                    .small-caption
+                        | От 5000 руб/м
+                    .title-caption
+                        | Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. По мнению психологов, гармоничное пространство дома способствует улучшению здоровья человека.Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. По мнению психологов, гармоничное пространство дома способствует улучшению здоровья человека.
+                    form.form(action="/")
+                        .form__title
+                            | Заказать
+                        .form__content
+                            label.service-label(for='inputs2') Телефон
+                            .inputs-wrap
+                                input.service-input(type="text" id='inputs2')
+                                button.button.button_orange(type='submit') Заказать
+                .image-wrap
+                    img(src='img/single-service/single-service-bg4.png')
+        article.values__item.values__item_left-image
+            .container
+                .image-wrap
+                    img(src='img/single-service/single-service-bg4.png')
+                .text-wrap
+                    h2.main-title
+                        | Дизайн интерьера
+                    .small-caption
+                        | От 5000 руб/м
+                    .title-caption
+                        |Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. По мнению психологов, гармоничное пространство дома способствует улучшению здоровья человека.Интерьерный проект от дизайнера подразумевает не только грамотную планировку, но и создание благоприятной атмосферы. По мнению психологов, гармоничное пространство дома способствует улучшению здоровья человека.
+                    form.form(action="/")
+                        .form__title
+                            |Заказать
+                        .form__content
+                            label.service-label(for='inputs2') Телефон
+                            .inputs-wrap
+                                input.service-input(type="text" id='inputs2')
+                                button.button.button_orange(type='submit') Заказать
+
+    section.discount
+        .container-small
+            .discount__title
+                .title
+                    |Система скидок
+                .caption
+                    |Для каждого, кто хочет сделать ремонт, это один из важнейших вопросов.
+            .discount__form
+                .areas
+                    .areas__caption
+                        | укажите площадь
+                    .areas__input
+                        input.service-input(type="text" placeholder='1м')
+                .forms
+                    .forms-item
+                        .forms-item__title
+                        .forms-item__wrap
+                            form(action="/")
+                                .inputs-wrap
+                                    label.inputs-label(for="input1")
+                                    input.service-input.inputs(id="input1")
+                                .inputs-wrap
+                                    label.inputs-label(for="input2")
+                                    input.service-input.inputs(id="input2")
+                                .inputs-wrap.inputs-wrap-inline
+                                    label.inputs-label(for="input3")
+                                    input.service-input.inputs(id="input3")
+                                .forms-item__discount
+                                    | -15 000 руб
+                                .forms-item__buttons
+                                    button.button.button_orange(type="button")
+

@@ -1,0 +1,248 @@
+//First Block
+h2.page-title {
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 48px;
+  margin-bottom: 60px;
+}
+
+.service-input {
+  height: 45px;
+  line-height: 45px;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+}
+
+.button {
+  height: 45px;
+  line-height: 45px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  color: #000000;
+}
+
+.button_orange {
+  background-color: #fff200;
+}
+
+.Rounded_Rectangle_1 {
+  position: absolute;
+  left: 1020px;
+  top: 2835px;
+  width: 180px;
+  height: 47px;
+  z-index: 76;
+}
+
+section.service-design_background-accent {
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 80px;
+  .bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 66%;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: cover;
+    background-position: center right;
+  }
+  .container {
+    min-height: 320px;
+    display: flex;
+    align-items: center;
+  }
+  .text-wrap {
+    max-width: 430px;
+    .main-title {
+      font-size: 34px;
+      margin-bottom: 20px;
+      line-height: 45px;
+    }
+    .title-caption {
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 23px;
+      font-weight: bold;
+    }
+  }
+}
+
+//Second Block
+section.service-design_to-column {
+  .container {
+    display: flex;
+    align-items: center;
+    min-height: 300px;
+    margin-bottom: 60px;
+    .image-wrap {
+      width: 50%;
+    }
+    .text-wrap {
+      width: 50%;
+      .main-title {
+        font-size: 34px;
+        margin-bottom: 20px;
+        line-height: 45px;
+      }
+      .small-caption {
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: bold;
+        margin-bottom: 35px;
+      }
+      .title-caption {
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 23px;
+      }
+    }
+  }
+}
+
+//Samples
+section.samples {
+  .sample-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding: 0 90px;
+    .sample-item {
+      width: 32%;
+      height: 200px;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+//Values
+section.values {
+  .values__item {
+    margin-bottom: 100px;
+    .container {
+      display: flex;
+      align-items: center;
+      min-height: 300px;
+      margin-bottom: 60px;
+      .image-wrap {
+        width: 50%;
+        img {
+          width: 90%;
+          height: 100%;
+        }
+      }
+      .text-wrap {
+        width: 50%;
+        .main-title {
+          font-size: 34px;
+          margin-bottom: 20px;
+          line-height: 45px;
+        }
+        .small-caption {
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 35px;
+        }
+        .title-caption {
+          font-size: 14px;
+          text-transform: uppercase;
+          line-height: 23px;
+          margin-bottom: 35px;
+        }
+      }
+      .form {
+        &__title {
+          font-size: 14px;
+          text-transform: uppercase;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
+        &__content {
+          .service-label {
+            display: block;
+            margin-bottom: 10px;
+          }
+          .inputs-wrap {
+            @include clearfix;
+            .service-input {
+              float: left;
+              width: 68%;
+            }
+            .button {
+              float: right;
+              width: 28%;
+            }
+          }
+
+        }
+      }
+    }
+    &_left-image{
+      .image-wrap{
+        text-align: left;
+      }
+    }
+    &_right-image{
+      .image-wrap{
+        text-align: right;
+      }
+    }
+  }
+}
+
+//Discount
+section.discount {
+  background-image: url("../img/single-service/single-service-sale-bg.png");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 40px 0;
+  .container-small {
+    border: 1px solid rgb(226, 226, 226);
+    width: 766px;
+    padding: 40px 70px;
+    border-radius: 10px;
+    background-color: rgb(247, 248, 250);
+    margin: 0 auto;
+  }
+  .discount__title {
+    .title {
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom:25px;
+    }
+    .caption{
+      text-align: center;
+      margin-bottom:30px;
+    }
+  }
+  .discount__form{
+    .areas{
+      &__caption{
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      &__input{
+        text-align: center;
+        .service-input{
+          width:80px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
