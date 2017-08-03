@@ -17,11 +17,11 @@ $(document).ready(function() { // начало document.ready
 		nav: true
 	});
 	
+	var margin_left; 
+	margin_left = $('.gallery-item:nth-child(1)').outerWidth(true);
+	$('.gallery-item:nth-child(4)').
+		css('margin-left', margin_left);
 	
 
-
-
-
-
-
+    
 }); // конец document.ready

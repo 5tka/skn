@@ -1,0 +1,58 @@
+// attendance
+.attendance-section {
+    padding:  {
+        top: 45px;
+        bottom: 30px;
+    }
+}
+.attendance-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.attendance-item {
+    width: 23.7%;
+    display: block;
+}
+.a-img {
+    margin-bottom: 20px;
+}
+.a-dscr {
+    span {
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #000;
+        display: block;
+        font-weight: bold;
+    }
+    i {
+        font-family: "Arial Narrow";
+        font-size: 18px;
+        color: #000;
+    }
+}
+// congrat
+.congrat-section{
+    padding: {
+        top: 45px;
+        bottom: 35px;
+    }
+}
+.congrat-info {
+    max-width: 995px;
+    margin: 0 auto;
+    span {
+        font-size: 18px;
+        margin-bottom: 35px;
+        color: #000;
+        display: block;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-indent: 15px;
+    }
+    p{
+        font-family: 'Open Sans';
+        font-size: 14px;
+        line-height: 24px;
+    }
+}

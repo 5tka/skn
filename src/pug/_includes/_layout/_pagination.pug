@@ -1,0 +1,14 @@
+mixin pagination
+	ul.pagination__list
+		li.pagination__item
+			a.pagination__link.prev(href='#') <
+		each item in [1,2,3]
+			li.pagination__item
+				a.pagination__link(href='#')=item
+		li.pagination__item
+			.pagination__link ...
+		each item in [12,13,14]
+			li.pagination__item
+				a.pagination__link(href='#')=item
+		li.pagination__item
+			a.pagination__link.next(href='#') >
