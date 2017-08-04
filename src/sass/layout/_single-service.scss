@@ -60,14 +60,18 @@ section.service-design_background-accent {
     -webkit-background-size: contain;
     background-size: cover;
     background-position: center right;
+    z-index: 0;
   }
   .container {
     min-height: 320px;
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 1;
   }
   .text-wrap {
-    max-width: 430px;
+    padding-left: 6.7%;
+    max-width: 50%;
     .main-title {
       font-size: 34px;
       margin-bottom: 20px;
@@ -89,12 +93,15 @@ section.service-design_background-accent {
     }
     &__content {
       .service-label {
+        font-size: 14px;
+        font-weight: 600;
         display: block;
         margin-bottom: 10px;
       }
       .inputs-wrap {
         @include clearfix;
         .service-input {
+          background-color: #f7f8fa;
           float: left;
           width: 68%;
         }
@@ -117,6 +124,7 @@ section.service-design_to-column {
     margin-bottom: 60px;
     .image-wrap {
       width: 50%;
+      padding-left: 15px;
     }
     .text-wrap {
       width: 50%;
@@ -132,6 +140,7 @@ section.service-design_to-column {
         margin-bottom: 35px;
       }
       .title-caption {
+        font-family: 'Arial Narrow';
         font-size: 14px;
         text-transform: uppercase;
         line-height: 23px;
@@ -188,6 +197,7 @@ section.values {
           margin-bottom: 35px;
         }
         .title-caption {
+          font-family: 'Arial Narrow';
           font-size: 14px;
           text-transform: uppercase;
           line-height: 23px;
@@ -203,12 +213,15 @@ section.values {
         }
         &__content {
           .service-label {
+            font-size: 14px;
+            font-weight: 600;
             display: block;
             margin-bottom: 10px;
           }
           .inputs-wrap {
             @include clearfix;
             .service-input {
+              background-color: #f7f8fa;
               float: left;
               width: 68%;
             }
@@ -221,6 +234,21 @@ section.values {
         }
       }
     }
+    .download__example {
+      display: inline-block;
+      color: #fff;
+      font-size: 14px;
+      text-align: center;
+      padding: 14px 30px;
+      border-radius: 4px;
+      background-color: #d7d7d7;
+      transition: background-color 0.25s;
+      margin-bottom: 20px;
+      &:hover {
+        background-color: #fff200;
+      }
+    }
+
     &_left-image{
       .image-wrap{
         text-align: left;
@@ -258,6 +286,8 @@ section.discount {
       margin-bottom:25px;
     }
     .caption{
+      color: #7b7c7d;
+      font-size: 14px;
       text-align: center;
       margin-bottom:30px;
     }
@@ -287,6 +317,7 @@ section.discount {
       }
     }
     .forms-item__title{
+      font-weight: 600;
       text-align: center;
       font-size:14px;
       text-transform: uppercase;
@@ -300,12 +331,15 @@ section.discount {
         margin-bottom:20px;
         padding: 0 20px;
         label{
-          font-weight: bold;
+          display: block;
+          font-weight: 600;
           font-size:14px;
           padding-left:10px;
           margin-bottom:5px;
         }
         .service-input{
+          font-size: 14px;
+          color: #7f7e7e;
           width:100%;
         }
       }
@@ -323,6 +357,7 @@ section.discount {
       }
     }
     .forms-item__discount{
+      font-size: 14px;
       text-align: center;
       height:45px;
       line-height:45px;
@@ -347,6 +382,10 @@ section.price{
   padding-top:65px;
   margin-bottom:80px;
   .price__caption{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 24px;
     padding: 0 70px;
     margin-bottom:50px;
   }

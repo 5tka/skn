@@ -1,3 +1,59 @@
+.about-services {
+    .container {
+        min-height: 300px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        align-items: center;
+    }
+}
+.about-services__img {
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+
+.about-services__link {
+    padding: 12px 18px 10px;
+    width: 134px;
+    height: 32px;
+    border-radius: 9px;
+    background-color:  #fff200 ;
+    transition: background-color 0.25s;
+    color: #000000;
+    font-family: Arial;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 40px;
+    text-transform: uppercase;
+    &:hover {
+        background-color: #ece788;
+    }
+}
+
+.about-services-content {
+    max-width: 50%;
+    margin-right: 60px;
+    text-align: right;
+    padding-left: 5%;
+}
+.about-services__title {
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 48px;
+}
+.about-services__text {
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: Arial;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+}
+
 .about-into {
     padding:  {
         top: 70px;
@@ -5,6 +61,7 @@
     }
 }
 .intro-dscr {
+    padding-left: 5%;
     color: #000;
     font-size: 24px;
     line-height: 42px;
@@ -19,12 +76,13 @@
     z-index: 1;
 }
 .about_advantages-items {
+    max-width: 100% ;
     justify-content: flex-start;
 }
 .about_advantages-item {
-    width: 33%;
+    width: 33.33%;
+    padding-right: 10px;
     margin-bottom: 40px;
-    margin-right: .5%;
     &:nth-child(3n) {
         margin-right: 0;
     }
@@ -62,7 +120,7 @@
         text-transform: uppercase;
         text-decoration: underline;
         font-size: 18px;
-        font-weight: bold;
+        font-weight: 800;
         color: #0b2435;
         display: inline-block;
         line-height: 30px;
@@ -99,10 +157,11 @@
     &:after {
         content: "";
         position: absolute;
-        background-image: url(../img/sprite.png);
-        width: 24px;
-        height: 36px;
-        background-position: -87px -46px;
+        @include sprite($slider-arr-yellow-r)
+        // background-image: url(../img/sprite.png);
+        // width: 24px;
+        // height: 36px;
+        // background-position: -87px -46px;
         top: 50%;
         left: -12px;
         margin-top: -18px;
@@ -131,6 +190,7 @@
         bottom: 20px;
     }
     p {
+        font-family: 'Arial Narrow';
         font-size: 13px;
         text-transform: uppercase;
         font-weight: bold;

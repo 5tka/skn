@@ -19,6 +19,7 @@
     align-items: center;
   }
   .text-wrap {
+    padding-left: 6.7%;
     max-width: 430px;
     .main-title {
       font-size: 34px;
@@ -26,6 +27,7 @@
       line-height: 45px;
     }
     .title-caption {
+      font-weight: 700;
       font-size: 14px;
       text-transform: uppercase;
       line-height: 23px;
@@ -71,6 +73,7 @@
       margin-bottom: 25px;
     }
     .caption {
+      font-family: 'Arial Narrow';
       font-style: italic;
       font-size: 16px;
     }
@@ -80,6 +83,7 @@
 .services__pre-footer {
   padding: 0 97px;
   .pre-footer__title {
+    font-weight: 700;
     font-size: 18px;
     text-transform: uppercase;
     padding-left: 15px;

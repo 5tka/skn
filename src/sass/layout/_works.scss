@@ -1,3 +1,64 @@
+.works-accent {
+    background-color: #f2f2f2;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    color: #1f1f1f;
+    position: relative;
+    margin-bottom: 56px;
+
+    .container  {
+        position: relative;
+        z-index: 1;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
+.works-accent__bg {
+    width: 60%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.works-accent__block {
+    padding-left: 30px;
+    padding-right: 60px;
+    width: 50%;
+}
+.works-accent__title {
+    font-family: Arial;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 27px;
+    position: relative;
+    padding-bottom: 34px;
+    margin-bottom: 20px;
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 51px;
+        height: 4px;
+        border-radius: 2px;
+        background-color: #fff000;
+    }
+}
+.works-accent__text  {
+    text-transform: uppercase;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 27px;
+}
+
+
 .works-section {
     padding:  {
         top: 75px;

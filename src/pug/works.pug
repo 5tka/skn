@@ -1,103 +1,58 @@
 extends _layout.pug
 include ./_includes/_layout/_pagination.pug
 block main
-    section.works-section
-        .container
-            .nav-wrapper
-                ul.gallery-list
-                    li.gallery-item(data-filter="all")
-                        a.gallery-link.gallery-link--active(href="#") Все типы
-                    li.gallery-item(data-filter=".b")
-                        a.gallery-link(href="#") комнатные помещения
-                    li.gallery-item(data-filter=".c")
-                        a.gallery-link(href="#") жилые помещения
-                    li.gallery-item(data-filter=".d")
-                        a.gallery-link(href="#") перепланировка
-                    li.gallery-item(data-filter=".e")
-                        a.gallery-link(href="#") дизайн
-                    li.gallery-item(data-filter=".f")
-                        a.gallery-link(href="#") отделочные работы
+	section.works-accent
+		.works-accent__bg(style='background-image: url(img/work-page/accent_bg.png)')
+		.container 
+			.works-accent__block
+				.works-accent__title Наши работы
+				.works-accent__text 
+					p С учетом Ваших требований и нашего опыта, мы предложим наиболее оптимальные технологии и материалы.
+	section.works-section
+		.container
+			.nav-wrapper
+				ul.gallery-list
+					li.gallery-item(data-filter="all")
+						a.gallery-link.gallery-link--active(href="#") Все типы
+					li.gallery-item(data-filter=".b")
+						a.gallery-link(href="#") комнатные помещения
+					li.gallery-item(data-filter=".c")
+						a.gallery-link(href="#") жилые помещения
+					li.gallery-item(data-filter=".d")
+						a.gallery-link(href="#") перепланировка
+					li.gallery-item(data-filter=".e")
+						a.gallery-link(href="#") дизайн
+					li.gallery-item(data-filter=".f")
+						a.gallery-link(href="#") отделочные работы
 
-        .container
-            .works_gallery-items
-                .works_gallery-item.mix.b
-                    .w_g-img
-                        img(src="img/works/w-1.jpg", alt="")
-                        .w_g-date
-                            span 25.01.2016
-                    .w_g-dscr
-                        span 
-                            | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
-                        a(href="#")
-                            | смотреть
-                .works_gallery-item.mix.c
-                    .w_g-img
-                        img(src="img/works/w-1.jpg", alt="")
-                        .w_g-date
-                            span 25.01.2016
-                    .w_g-dscr
-                        span 
-                            | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
-                        a(href="#")
-                            | смотреть
-                .works_gallery-item.mix.d
-                    .w_g-img
-                        img(src="img/works/w-1.jpg", alt="")
-                        .w_g-date
-                            span 25.01.2016
-                    .w_g-dscr
-                        span 
-                            | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
-                        a(href="#")
-                            | смотреть
-                .works_gallery-item.mix.e
-                    .w_g-img
-                        img(src="img/works/w-1.jpg", alt="")
-                        .w_g-date
-                            span 25.01.2016
-                    .w_g-dscr
-                        span 
-                            | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
-                        a(href="#")
-                            | смотреть
-                .works_gallery-item.mix.f
-                    .w_g-img
-                        img(src="img/works/w-1.jpg", alt="")
-                        .w_g-date
-                            span 25.01.2016
-                    .w_g-dscr
-                        span 
-                            | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
-                        a(href="#")
-                            | смотреть
-                .works_gallery-item.mix.d
-                    .w_g-img
-                        img(src="img/works/w-1.jpg", alt="")
-                        .w_g-date
-                            span 25.01.2016
-                    .w_g-dscr
-                        span 
-                            | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
-                        a(href="#")
-                            | смотреть
-                .works_gallery-item.mix.e
-                    .w_g-img
-                        img(src="img/works/w-1.jpg", alt="")
-                        .w_g-date
-                            span 25.01.2016
-                    .w_g-dscr
-                        span 
-                            | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
-                        a(href="#")
-                            | смотреть
-                .works_gallery-item.mix.f
-                    .w_g-img
-                        img(src="img/works/w-1.jpg", alt="")
-                        .w_g-date
-                            span 25.01.2016
-                    .w_g-dscr
-                        span 
-                            | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
-                        a(href="#")
-                            | смотреть
-            +pagination
+		.container
+			.works_gallery-items
+				-for (var x=0; x<8; x++)
+					.works_gallery-item
+						.w_g-img
+							img(src="img/works/w-1.jpg", alt="")
+							.w_g-date
+								span 25.01.2016
+						.w_g-dscr
+							span 
+								| РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
+							a(href="#")
+								| смотреть
+			+pagination
+	section.skn-form__section
+		.container 
+			h2.skn-form__title Узнай о ремонте СКН
+			form.skn-form
+				p.skn-form__text Оставьте вашу заявку здесь и мы ответим на все ваши вопросы!
+				.fields
+					.inputs__wrap
+						label
+							span.text Телефон
+							input.field(type='text' placeholder='Ваш телефон')
+						label
+							span.text Имя
+							input.field(type='text' placeholder='Ваше имя')
+					label
+						span.text Напишите свой вопрос здесь
+						textarea.field(type='text' placeholder='Ваше сообщение')
+				button(type='submit').submit ОСТАВИТЬ ЗАЯВКУ

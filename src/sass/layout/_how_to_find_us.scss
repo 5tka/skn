@@ -103,10 +103,10 @@
 	line-height: 23px;
 	text-transform: uppercase;
 	border-radius: 3px;
-	border: 3px solid rgba(0,0,0,0);
+	border: 3px solid #1f81d1;
 	background-color: #ffffff;
 	&:hover {
-		background-color: #ffffff;
-		border-color: #1f81d1;
+		background-color: #1f81d1;
+		color: #fff;
 	}
 }

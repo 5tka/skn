@@ -2,12 +2,25 @@
 	position: relative;
 	z-index: 2;
 	background-color: #fff;
+
 	.container {
 		padding-top: 25px;
 		padding-bottom: 10px;
 		display: flex;
 		align-items: flex-end;
 		justify-content: space-between;
+	}
+	&.header_common {
+		.logo__link {
+			width: 150px;
+			img {
+				width: 100%;
+			}
+		}
+		.header__menu {
+			position: relative;
+			top: -5px;
+		}
 	}
 	&.main-page__header {
 		background: none;
