@@ -5,7 +5,11 @@ $(document).ready(function() { // начало document.ready
 	});
 	$('.main__slider').owlCarousel({
 		items: 1,
-		nav: true
+		nav: true,
+		dots: false,
+		autoplay: true,
+		autoplayHoverPause: true,
+		loop: true
 	});
 	$('.portfolio-gallery__slider').owlCarousel({
 		items: 3,
@@ -19,6 +23,7 @@ $(document).ready(function() { // начало document.ready
 		items: 3,
 		nav: true
 	});
+	$('.js_phone-mask').mask("+7(999)999-99-99");
 	
 	var margin_left; 
 	margin_left = $('.gallery-item:nth-child(1)').outerWidth(true);

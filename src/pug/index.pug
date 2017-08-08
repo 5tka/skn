@@ -10,11 +10,11 @@ block header
 				each item in list 
 					li.menu__item
 						a.menu__link(href='#')=item
-				li.menu__item.menu__tel
-					a.menu__tel-link(href='tel:+78129214449') 
-						span +7 (812) 
-						span.accent 921‑44-49
-					a.menu__call-request(href='#') Заказать звонок!
+			.menu__item.menu__tel
+				a.menu__tel-link(href='tel:+78129214449') 
+					span +7 (812) 
+					span.accent 921‑44-49
+				a.menu__call-request(href='#') Заказать звонок!
 block main
 	section.main__slider.owl-carousel
 		each item in [1,2]
@@ -84,7 +84,7 @@ block main
 								.serv-dscr
 									p
 										| Ремонт коттеджей
-						.serv-dscr-wrap--hidden.u-up
+						.serv-dscr-wrap--hidden
 							.serv-dscr--hidden
 								p
 									| Ремонт коттеджей
@@ -100,7 +100,7 @@ block main
 								.serv-dscr
 									p
 										| Ремонт комнатных <br> помещений
-						.serv-dscr-wrap--hidden.d-down
+						.serv-dscr-wrap--hidden
 							.serv-dscr--hidden
 								p
 									| Ремонт коттеджей
@@ -116,7 +116,7 @@ block main
 								.serv-dscr
 									p
 										| Ремонт фасадов <br> зданий
-						.serv-dscr-wrap--hidden.u-up
+						.serv-dscr-wrap--hidden
 							.serv-dscr--hidden
 								p
 									| Ремонт коттеджей
@@ -132,7 +132,7 @@ block main
 								.serv-dscr
 									p
 										| Высотные работы
-						.serv-dscr-wrap--hidden.d-down
+						.serv-dscr-wrap--hidden
 							.serv-dscr--hidden
 								p
 									| Ремонт коттеджей
@@ -266,7 +266,7 @@ block main
 					.inputs__wrap
 						label
 							span.text Телефон
-							input.field(type='text' placeholder='Ваш телефон')
+							input.field.js_phone-mask(type='text' placeholder='Ваш телефон')
 						label
 							span.text Имя
 							input.field(type='text' placeholder='Ваше имя')

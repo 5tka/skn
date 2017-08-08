@@ -7,19 +7,20 @@
 		padding-top: 25px;
 		padding-bottom: 10px;
 		display: flex;
-		align-items: flex-end;
+		flex-wrap: nowrap;
+		align-items: baseline;
 		justify-content: space-between;
 	}
+	.logo__link {
+		align-self: flex-start;
+		width: 110px;
+	} 
 	&.header_common {
 		.logo__link {
 			width: 150px;
 			img {
 				width: 100%;
 			}
-		}
-		.header__menu {
-			position: relative;
-			top: -5px;
 		}
 	}
 	&.main-page__header {
@@ -39,11 +40,19 @@
 .header__menu {
 	margin-left: 10px;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: flex-start;
 	justify-content: space-between;
 	flex: 1;
 }
+.menu__item {
+	&.menu__tel {
+		margin-left: 5px;
+	}
+}
+
 .menu__link {
+	display: block;
 	font-family: Arial;
 	font-size: 14px;
 	font-weight: 700;
