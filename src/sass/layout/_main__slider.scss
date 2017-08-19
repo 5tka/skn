@@ -77,3 +77,13 @@
 		background-color: #ece788;
 	}
 }
+
+@media screen and (max-width: 1100px) {
+	.main__slider {
+		margin-top: -120px;
+	}
+	.main__slider-item .container {
+		padding-top: 120px;
+	}
+}
+
