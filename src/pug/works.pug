@@ -13,22 +13,22 @@ block main
 			.nav-wrapper
 				ul.gallery-list
 					li.gallery-item(data-filter="all")
-						a.gallery-link.gallery-link--active(href="#") Все типы
+						a.gallery-link.gallery-link--active(href="javascript:void(0)") Все типы
 					li.gallery-item(data-filter=".b")
-						a.gallery-link(href="#") комнатные помещения
+						a.gallery-link(href="javascript:void(0)") комнатные помещения
 					li.gallery-item(data-filter=".c")
-						a.gallery-link(href="#") жилые помещения
+						a.gallery-link(href="javascript:void(0)") жилые помещения
 					li.gallery-item(data-filter=".d")
-						a.gallery-link(href="#") перепланировка
+						a.gallery-link(href="javascript:void(0)") перепланировка
 					li.gallery-item(data-filter=".e")
-						a.gallery-link(href="#") дизайн
+						a.gallery-link(href="javascript:void(0)") дизайн
 					li.gallery-item(data-filter=".f")
-						a.gallery-link(href="#") отделочные работы
+						a.gallery-link(href="javascript:void(0)") отделочные работы
 
 		.container
 			.works_gallery-items
-				-for (var x=0; x<8; x++)
-					.works_gallery-item
+				-for (var x=0; x<3; x++)
+					.works_gallery-item.mix.b
 						.w_g-img
 							img(src="img/works/w-1.jpg", alt="")
 							.w_g-date
@@ -38,6 +38,47 @@ block main
 								| РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
 							a(href="#")
 								| смотреть
+				-for (var x=0; x<2; x++)
+					.works_gallery-item.mix.c
+						.w_g-img
+							img(src="img/works/w-1.jpg", alt="")
+							.w_g-date
+								span 25.01.2016
+						.w_g-dscr
+							span 
+								| РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
+							a(href="#")
+								| смотреть
+				.works_gallery-item.mix.d
+					.w_g-img
+						img(src="img/works/w-1.jpg", alt="")
+						.w_g-date
+							span 25.01.2016
+					.w_g-dscr
+						span 
+							| РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
+						a(href="#")
+							| смотреть
+				.works_gallery-item.mix.e
+					.w_g-img
+						img(src="img/works/w-1.jpg", alt="")
+						.w_g-date
+							span 25.01.2016
+					.w_g-dscr
+						span 
+							| РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
+						a(href="#")
+							| смотреть
+				.works_gallery-item.mix.f
+					.w_g-img
+						img(src="img/works/w-1.jpg", alt="")
+						.w_g-date
+							span 25.01.2016
+					.w_g-dscr
+						span 
+							| РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
+						a(href="#")
+							| смотреть
 			+pagination
 	section.skn-form__section
 		.container 
