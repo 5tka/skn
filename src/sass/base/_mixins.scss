@@ -22,6 +22,11 @@
   font-size: $px;
   font-size: ($px / $maxwidth) * 1vw;
 }
+@mixin lh($px){
+  $maxwidth: ($maxwidth-container * 0.01) * 1px;
+  line-height: $px;
+  line-height: ($px / $maxwidth) * 1vw;
+}
 
 @mixin border-radius($radius: 5px) {
     -webkit-border-radius: $radius;
@@ -83,7 +88,7 @@
             transform-origin: $origin;
 }
 @mixin breakpoint($width) {
-    @media only screen and (max-width: ($width / 16) + px) {
+    @media only screen and (max-width: $width + px) {
         @content;
     }
 }

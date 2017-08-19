@@ -1,6 +1,6 @@
 // shares
 .shares-section {
-    padding:  {
+    padding: {
         top: 40px;
         bottom: 35px;
     }
@@ -68,7 +68,7 @@
 }
 // services
 .services-section {
-    padding:  {
+    padding: {
         top: 35px;
         bottom: 45px;
     }
@@ -79,13 +79,14 @@
 }
 .services-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     overflow: hidden;
 }
 .services-item {
     overflow: hidden;
     position: relative;
+    margin: 8px;
     &:hover {
         .serv-dscr-wrap {
             opacity: 0;
@@ -130,7 +131,7 @@
     }
 }
 .serv-dscr-wrap--hidden {
-    transition: top 0.4s;
+    transition: top .4s;
     position: absolute;
     padding: 20px;
     top: 100%;
@@ -184,7 +185,7 @@
 
 // advantages
 .advantages-section {
-    padding:  {
+    padding: {
         top: 45px;
         bottom: 80px;
     }
@@ -247,6 +248,7 @@
         color: $ac;
         display: inline-block;
         margin-bottom: 22px;
+        line-height: 20px;
     }
     p {
         font-size: 21px;
@@ -260,17 +262,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 460px;
 }
 .about-container {
     max-width: 780px;
     margin: 0 auto;
-    padding:  {
-        top: 100px;
-        bottom: 100px;
-    }
+    max-height: 480px;
+    min-height: calc((480/(1180 * .01)*1vw));
+    position: relative;
 }
 .about-dscr {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     span {
         font-size: 30px;
         font-weight: bold;
@@ -288,7 +291,7 @@
 // feedback
 .feedback-section {
     background-color: #f9f9f9;
-    padding:  {
+    padding: {
         top: 50px;
         bottom: 50px;
     }
@@ -298,7 +301,7 @@
     margin: 0 auto;
 }
 .feedback-dscr {
-    width: 60%;
+    max-width: 60%;
     span {
         font-size: 24px;
         font-weight: bold;
@@ -314,7 +317,7 @@
     }
 }
 .feedback-form-wrapper {
-    max-width: 320px;
+    width: 320px;
     padding-top: 10px;
 }
 .f-title {
@@ -332,7 +335,7 @@
     border: 1px solid #e2e2e2;
     @include border-radius(3px);
     padding: 13px;
-    width: 320px;
+    width: 100%;
     outline: none;
     font-size: 14px;
     font-weight: 600;
@@ -368,7 +371,7 @@
     background: #fff200;
     @include border-radius(5px);
     padding: 15px 0;
-    width: 320px;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
     position: relative;
@@ -387,4 +390,96 @@
         bottom: -20px;
         right: 70px;
     }
+}
+
+@include breakpoint(1100) {
+    .about-dscr {
+        span {
+            @include fz(32px);
+        }
+        p {
+            @include fz(26px);
+            @include lh(59px);
+        }
+    }
+}
+@include breakpoint(925) {
+    .shares-item {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    .sh-dscr p {
+        min-height: 40px;
+    }
+    .advantages-item {
+        width: 100%;
+        display: block;
+        padding: 0 !important;
+        text-align: center;
+    }
+    .adv-img-wrap {
+        margin: 0;
+    }
+    .adv-img {
+        margin: 0 auto;
+    }
+    .adv-dscr {
+        p {
+            @include fz(25px);
+            @include lh(50px);
+            br {
+                display: none;
+            }
+        }
+    }
+}
+@include breakpoint(775) {
+    .about-dscr {
+        span {
+            @include fz(35px);
+        }
+        p {
+            @include fz(30px);
+            @include lh(68px);
+        }
+    }
+}
+@include breakpoint(725) {
+    .adv-dscr {
+        p {
+            @include fz(30px);
+            @include lh(60px);
+        }
+    }
+}
+@include breakpoint(625) {
+    .shares-item {
+        width: 100%;
+    }
+    .sh-dscr p {
+        min-height: 40px;
+    }
+    .about-container {
+        min-height: 350px;
+    }
+    .about-dscr {
+        span {
+            font-size: 20px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 32px;
+        }
+    }
+}
+@include breakpoint(550) {
+    .adv-dscr {
+        p {
+            font-size: 15px;
+            line-height: 30px;
+        }
+    }
+}
+.wrapper {
+    overflow: hidden;
 }
