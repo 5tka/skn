@@ -59,3 +59,16 @@
 }
 .news-single__prev{}
 .news-single__next{}
+
+@media screen and (max-width: 600px) {
+	.news-single__bg {
+		height: 350px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.news-single__navigation {
+		flex-direction: column;
+		align-items: center;
+	}
+}

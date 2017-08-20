@@ -86,7 +86,20 @@ $(document).ready(function() { // начало document.ready
 		nav: true
 	});
 	$('.js_phone-mask').mask("+7(999)999-99-99");
+
+	$('.js_mob-menu__close').click(function(event) {
+		event.preventDefault();
+			$('.js_mob-menu').removeClass('opened')
+
+		return false;
+	})
 	
+	$('.js_mob-menu__open').click(function(event) {
+		event.preventDefault();
+			$('.js_mob-menu').addClass('opened')
+		return false;
+	})
+
 	var margin_left; 
 	margin_left = $('.gallery-item:nth-child(1)').outerWidth(true);
 	$('.gallery-item:nth-child(4)').
