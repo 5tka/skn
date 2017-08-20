@@ -1,24 +1,58 @@
 extends _layout.pug
 block main
     section.work_page-section
+        .project-slider
+            .project-slider__wrap
+                .project-slider__number
+                    span.project-slider__number-where
+                    span.project-slider__number-all
+                ul.project-slider__list
+                    li.project-slider__item
+                        .project-slider__pic
+                            img(src="https://d1vp8nomjxwyf1.cloudfront.net/wp-content/uploads/sites/41/2016/10/25132002/hotel-explorers-crew4-bunk.jpg", alt="")
+                    li.project-slider__item
+                        .project-slider__pic
+                            img(src="http://www.theeurope.com/files/images/new/europe-1920-1080-golfside-room--september-2012.jpg", alt="")
+                    li.project-slider__item
+                        .project-slider__pic
+                            img(src="http://kingsmillshotel.com/wp-content/uploads/Luxury-Room.jpg", alt="")
+                    li.project-slider__item
+                        .project-slider__pic
+                            img(src="http://images.kuoni.co.uk/73/atlantis-the-palm-dubai-31334230-1494328288-ImageGalleryLightboxLarge.jpg", alt="")
+                    li.project-slider__item
+                        .project-slider__pic
+                            img(src="https://deerhurstresort.com/uploads/2016/11/stay-hotel-style-rooms-pavilion-2-1920x1080.jpg", alt="")
+            .project-slider__wrap-sm    
+                .project-slider__wrap-sm
+                    ul.project-slider__list-sm
+                        li.project-slider__item-sm 
+                            img(src='http://via.placeholder.com/92x92')
+                        li.project-slider__item-sm 
+                            img(src='img/work-page/thumb/t-2.jpg')
+                        li.project-slider__item-sm 
+                            img(src='http://via.placeholder.com/92x92')
+                        li.project-slider__item-sm 
+                            img(src='http://via.placeholder.com/92x92')
+                        li.project-slider__item-sm 
+                            img(src='img/work-page/thumb/t-2.jpg')
         .container
             .work_page-wrapper
                 h3.w-p-title
                     | РЕМОНТ 3-Х КОМНАТНОЙ КВАРТИРЫ ПОД КЛЮЧ
-                ul.w-p_slider-list
-                    li.w-p_slider-item
-                        img(src="http://via.placeholder.com/1100x375", alt="")
-                    li.w-p_slider-item
-                        img(src="img/work-page/w-1.jpg", alt="")
-                    li.w-p_slider-item
-                        img(src="http://via.placeholder.com/1100x375", alt="")
-                #slider-controls
-                    a(data-slide-index='0', href='')
-                        img(src='http://via.placeholder.com/92x92')
-                    a(data-slide-index='1', href='')
-                        img(src='img/work-page/thumb/t-2.jpg')
-                    a(data-slide-index='2', href='')
-                         img(src='http://via.placeholder.com/92x92')
+                //- ul.w-p_slider-list
+                //-     li.w-p_slider-item
+                //-         img(src="http://via.placeholder.com/1100x375", alt="")
+                //-     li.w-p_slider-item
+                //-         img(src="img/work-page/w-1.jpg", alt="")
+                //-     li.w-p_slider-item
+                //-         img(src="http://via.placeholder.com/1100x375", alt="")
+                //- #slider-controls
+                //-     a(data-slide-index='0', href='')
+                //-         img(src='http://via.placeholder.com/92x92')
+                //-     a(data-slide-index='1', href='')
+                //-         img(src='img/work-page/thumb/t-2.jpg')
+                //-     a(data-slide-index='2', href='')
+                //-          img(src='http://via.placeholder.com/92x92')
             .work_page-info.clearfix
                 .w_p-i
                     span
