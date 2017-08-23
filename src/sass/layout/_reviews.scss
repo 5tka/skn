@@ -85,3 +85,54 @@
 	font-weight: 400;
 	line-height: 21px;
 }
+
+@media screen and (max-width: 500px) {
+	.reviews__slider-wrap {
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.review-author__wrap {
+		flex-direction: column;
+		align-items: center;
+	}
+	.review-author__img-wrap {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	.review-slide__block {
+		padding: 15px;
+	}
+}
+
+@media screen and (max-width: 599px) {
+	.review-slide {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+	.reviews {
+		padding-top: 35px;
+	}
+}
+@media screen and (max-width: 850px){
+	.review-author__wrap {
+		margin-bottom: 15px;
+	}
+}
+
+@media screen and (min-width: 600px) and (max-width: 850px){
+	.review-author__wrap {
+		flex-direction: column;
+		align-items: center;
+
+	}
+	.review-author__img-wrap {
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+	.review-slide__block {
+		padding: 15px;
+	}
+}

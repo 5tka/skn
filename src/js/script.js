@@ -12,16 +12,55 @@ $(document).ready(function() { // начало document.ready
 		loop: true
 	});
 	$('.portfolio-gallery__slider').owlCarousel({
-		items: 3,
-		nav: true
+		// items: 3,
+		nav: true,
+		responsive : {
+			0 : {
+				items : 1
+			},
+			480 : {
+				items : 2
+			},
+			768 : {
+				items : 3
+			}
+		}
 	});
 	$('.clients__slider').owlCarousel({
-		items: 5,
-		nav: true
+		// items: 5,
+		nav: true,
+		responsive : {
+			0 : {
+				items : 1
+			},
+			380 : {
+				items : 2
+			},			
+			480 : {
+				items : 3
+			},
+			768 : {
+				items : 4
+			},
+			1025: {
+				items: 5
+			}
+		}
 	});
 	$('.reviews__slider').owlCarousel({
-		items: 3,
-		nav: true
+		// items: 3,
+		nav: true,
+		responsive : {
+			0 : {
+				items : 1
+			},
+			600 : {
+				items : 2
+			},
+			850 : {
+				items : 3
+			}
+		}
 	});
 	$('.js_phone-mask').mask("+7(999)999-99-99");
 
@@ -37,6 +76,24 @@ $(document).ready(function() { // начало document.ready
 			$('.js_mob-menu').addClass('opened')
 		return false;
 	})
+
+	$('.js_validation__form').submit(function(event) {
+		event.preventDefault();
+		var validation = false;
+
+		$('.js_validation__form').find('.js_validation_object').each(function (indx, element) {
+			if ($(element).val() == '' ) {
+				validation = false
+				$(element).closest('.js_validation_item').addClass('unvalid')
+			} else {
+				validation = true
+				$(element).closest('.js_validation_item').removeClass('unvalid')
+			}
+
+		})
+
+		return validation ? true : false;
+	});
 
 	var margin_left; 
 	margin_left = $('.gallery-item:nth-child(1)').outerWidth(true);

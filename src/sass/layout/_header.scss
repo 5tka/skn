@@ -92,6 +92,21 @@
 	text-align: right;
 }
 
+.header_common {
+	.menu-open {
+		.line {
+			background-color: #000;
+		}
+	}
+}
+.main-page__header {
+	.menu-open {
+		.line {
+			background-color: #fff;
+		}
+	}
+}
+
 .mobile-menu__wrap {
 	position: fixed;
 	bottom: 100%;
@@ -146,7 +161,6 @@
 		height: 4px;
 		margin-bottom: 4px;
 		display: block;
-		background-color: #000;
 	}
 }
 @media screen and (max-width: 750px) {
@@ -186,7 +200,7 @@
 	}
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 400px) {
 	.header .container {
 		flex-wrap: wrap;
 	}

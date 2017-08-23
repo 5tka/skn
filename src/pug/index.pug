@@ -3,6 +3,12 @@ extends _layout.pug
 block header 
 	header.header.main-page__header
 		.container
+			.menu-open_wrap
+				a.menu-open.js_mob-menu__open(href='#') 
+					span.text Октрыть		
+					span.line
+					span.line
+					span.line
 			a(href='/').logo__link
 				img(src='img/logo.white.svg')
 			menu.header__menu
@@ -260,17 +266,20 @@ block main
 	section.skn-form__section
 		.container 
 			h2.skn-form__title Узнай о ремонте СКН
-			form.skn-form
+			form.skn-form.js_validation__form
 				p.skn-form__text Оставьте вашу заявку здесь и мы ответим на все ваши вопросы!
 				.fields
 					.inputs__wrap
-						label
-							span.text Телефон
-							input.field.js_phone-mask(type='text' placeholder='Ваш телефон')
-						label
-							span.text Имя
-							input.field(type='text' placeholder='Ваше имя')
-					label
-						span.text Напишите свой вопрос здесь
-						textarea.field(type='text' placeholder='Ваше сообщение')
+						label.js_validation_item
+							span.text.js_usual_text Телефон
+							span.js_error Введите телефон
+							input.field.js_phone-mask.js_validation_object(type='text' placeholder='Ваш телефон')
+						label.js_validation_item
+							span.text.js_usual_text Имя
+							span.js_error Введите имя
+							input.field.js_validation_object(type='text' placeholder='Ваше имя')
+					label.js_validation_item
+						span.text.js_usual_text Напишите свой вопрос здесь
+						span.js_error Введите текст вопроса
+						textarea.field.js_validation_object(type='text' placeholder='Ваше сообщение')
 				button(type='submit').submit ОСТАВИТЬ ЗАЯВКУ

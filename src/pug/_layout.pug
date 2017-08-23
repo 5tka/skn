@@ -5,6 +5,15 @@ html(lang="ru-RU")
 	body
 		.wrapper
 			.maincontent
+				.mobile-menu__wrap.js_mob-menu
+					a.menu-close.js_mob-menu__close(href='#') 
+						span.text закрыть
+						span.line
+						span.line
+					ul.mobile-menu__list
+						each item in ['Главная','О компании','прайс','услуги','наши работы','Новости','контакты'] 
+							li.mobile-menu__item
+								a.mobile-menu__link(href='#')=item
 				block header
 					include ./_includes/_layout/_header.pug
 				main

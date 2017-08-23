@@ -110,3 +110,21 @@
 		color: #fff;
 	}
 }
+
+
+@media screen and (max-width: 767px) {
+	.find-us__wrapper {
+		.container {
+			padding: 0;
+		}
+	}
+	.find-us__map {
+		position: relative !important;
+		height: 300px;
+		overflow: hidden !important;
+	}
+	.find-us__block {
+		margin: 10px auto;
+	}
+	
+}
