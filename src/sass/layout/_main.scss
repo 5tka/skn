@@ -395,6 +395,29 @@
 
 
 @include breakpoint(1100) {
+    .advantages-items {
+        justify-content: center;
+    }
+    .advantages-item {
+        display: block;
+        padding: 0  10px !important;
+        text-align: center;
+    }
+    .adv-img-wrap {
+        margin: 0;
+    }
+    .adv-img {
+        margin: 0 auto;
+    }
+    .adv-dscr {
+        p {
+            @include fz(22px);
+            @include lh(44px);
+            br {
+                display: none;
+            }
+        }
+    }
     .about-dscr {
         span {
             @include fz(32px);
@@ -412,27 +435,6 @@
     }
     .sh-dscr p {
         min-height: 40px;
-    }
-    .advantages-item {
-        width: 100%;
-        display: block;
-        padding: 0 !important;
-        text-align: center;
-    }
-    .adv-img-wrap {
-        margin: 0;
-    }
-    .adv-img {
-        margin: 0 auto;
-    }
-    .adv-dscr {
-        p {
-            @include fz(25px);
-            @include lh(50px);
-            br {
-                display: none;
-            }
-        }
     }
 }
 @include breakpoint(775) {
@@ -455,6 +457,9 @@
     }
 }
 @include breakpoint(625) {
+    .advantages-item {
+        width: 100%;
+    }
     .shares-item {
         width: 100%;
     }
